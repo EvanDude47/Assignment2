@@ -1,0 +1,23 @@
+<% include _header %>
+
+<h1>Your List</h1>
+
+<% if(items.length){ %>
+    <% items.forEach(function(item){ %>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="text-muted pull-right">
+               <%= item.published %>
+            </div>
+            <%= item.title %>
+        </div>
+		<div class="panel-body">
+            <%= item.body %>
+        </div>
+    </div>
+    <% }) %>
+<% } else { %>
+    No entries! <a href="/new-entry">Add an entry?</a>
+<% } %>
+
+<% include _footer %>

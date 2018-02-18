@@ -1,0 +1,15 @@
+<% include _header %>
+
+<h2>Add an entry to your list.</h2>
+
+<form method="post" role="form">
+    <div class="form-group">
+        <label for="title">List item</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Enter an item" required>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Post Item" class="btn btn-primary">
+    </div>
+</form>
+
+<% include _footer %>
