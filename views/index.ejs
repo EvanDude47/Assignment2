@@ -1,7 +1,5 @@
 <% include _header %>
 
-<h1>Your List</h1>
-
 <% if(items.length){ %>
     <% items.forEach(function(item){ %>
     <div class="panel panel-default">
@@ -10,9 +8,6 @@
                <%= item.published %>
             </div>
             <%= item.title %>
-        </div>
-		<div class="panel-body">
-            <%= item.body %>
         </div>
     </div>
     <% }) %>

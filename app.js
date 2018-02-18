@@ -82,7 +82,7 @@ app.get("/", ensureAuthenticated, function(req, res){
         dbObj.collection("items").find().toArray(function(err, results){
             console.log("Site served");
             db.close();
-            res.render("index", {index:results});
+            res.render("index", {items:results});
         });
     });
 });
@@ -100,7 +100,7 @@ app.get("/sign-up", function(req, res){
 });
 
 app.post("/new-entry", function(req, res){
-    if(!req.body.title||!req.body.body){
+    if(!req.body.title){
         res.status(400).send("Entries must have valid text");
         return;
     }
